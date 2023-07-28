@@ -236,7 +236,7 @@ for i,j in interests:
 
 #print(lista_de_palavras)
 contar_palavras=contar_palavras(lista_de_palavras)
-print(contar_palavras)
+#print(contar_palavras)
 
 palavras = dict(sorted(contar_palavras.items(), key=lambda item: item[1],reverse=True))
 for chave, valor in palavras.items():
