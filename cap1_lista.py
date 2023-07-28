@@ -215,3 +215,29 @@ print(40*'#')
 print('salaries_by_bucket:')
 for chave, valor in average_salary_by_bucket.items():
     print(f'{chave}: {valor}')
+
+############################################################################
+print('')
+print(40*'#')
+print('levantamento de tópicos:')
+
+def contar_palavras(lista):
+    contagem={}
+    for i in lista:
+        if i in contagem:
+            contagem[i]+=1
+        else:
+            contagem[i]=1
+    return contagem
+
+lista_de_palavras=[]
+for i,j in interests:
+    lista_de_palavras.append(j.lower())
+
+#print(lista_de_palavras)
+contar_palavras=contar_palavras(lista_de_palavras)
+print(contar_palavras)
+
+palavras = dict(sorted(contar_palavras.items(), key=lambda item: item[1],reverse=True))
+for chave, valor in palavras.items():
+    print(f'{chave}: {valor}')
