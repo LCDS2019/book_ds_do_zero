@@ -119,7 +119,7 @@ interests = [
     (2,'statsmodels'),(2,'Pandas'),(3,'R'),(3,'Python'),(3,'statistics'),(3,'regression'),(3,'probability'),
     (4,'machine learning'),(4,'regression'),(4,'decision trees'),(4,'libsvm'),(5,'python'),(5,'R'),(5,'C++'),
     (5,'Haskell'),(5,'programming language'),(6,'statistics'),(6,'probability'),(6,'mathematics'),(6,'theory'),
-    (7,'machine learning'),(7,'scikit-learn'),(7,'Mahout'),(7,'neual networks'),(8,'deep learning'),(8,'Big Data'),
+    (7,'machine learning'),(7,'scikit-learn'),(7,'Mahout'),(7,'neural networks'),(8,'deep learning'),(8,'Big Data'),
     (8,'Artificial Intelligence'),(9,'Hadoop'),(9,'Java'),(9,'Mapreduce'),(9,'Big Data')
 ]
 
@@ -138,4 +138,26 @@ for i in usuarios:
     print(users[i]['name'])
 
 ############################################################################
+from collections import defaultdict
 
+dic_users_interest=defaultdict(list)
+for user_id, interest in interests:
+    dic_users_interest[interest].append(user_id)
+dic_users_interest= dict(sorted(dic_users_interest.items(), key=lambda item: len(item[1]),reverse=True))
+
+
+dic_interest_users=defaultdict(list)
+for user_id, interest in interests:
+    dic_interest_users[user_id].append(interest)
+
+print('')
+print(40*'#')
+print('dic_users_interest:')
+for chave, valor in dic_users_interest.items():
+    print(f'{chave}: {valor}')
+
+print('')
+print(40*'#')
+print('dic_interest_users:')
+for chave, valor in dic_interest_users.items():
+    print(f'{chave}: {valor}')
