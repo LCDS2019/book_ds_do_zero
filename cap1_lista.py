@@ -108,3 +108,34 @@ for i in range(10):
     contar_elementos(lista)
 
 
+############################################################################
+print('')
+print('Criando lista de interesse')
+print('')
+
+interests = [
+    (0,'Hadoop'),(0,'Big Data'),(0,'HBase'),(0,'Java'),(0,'Spark'),(0,'Storm'),(0,'Cassandra'),(1,'NoSQL'),
+    (1,'MongoDB'),(1,'Cassandra'),(1,'HBase'),(1,'Postgre'),(2,'Python'),(2,'scikit-learn'),(2,'scipy'),(2,'Numpy'),
+    (2,'statsmodels'),(2,'Pandas'),(3,'R'),(3,'Python'),(3,'statistics'),(3,'regression'),(3,'probability'),
+    (4,'machine learning'),(4,'regression'),(4,'decision trees'),(4,'libsvm'),(5,'python'),(5,'R'),(5,'C++'),
+    (5,'Haskell'),(5,'programming language'),(6,'statistics'),(6,'probability'),(6,'mathematics'),(6,'theory'),
+    (7,'machine learning'),(7,'scikit-learn'),(7,'Mahout'),(7,'neual networks'),(8,'deep learning'),(8,'Big Data'),
+    (8,'Artificial Intelligence'),(9,'Hadoop'),(9,'Java'),(9,'Mapreduce'),(9,'Big Data')
+]
+
+for i in interests:
+    print(i)
+
+def data_scientists_who_like(interest):
+    ans = [user_id for user_id, user_interests in interests if user_interests == interest]
+    print(interest)
+    return ans
+
+print('')
+print('Usuários com o mesmo interesse:')
+usuarios = data_scientists_who_like('machine learning')
+for i in usuarios:
+    print(users[i]['name'])
+
+############################################################################
+
