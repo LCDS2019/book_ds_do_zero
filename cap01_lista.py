@@ -220,7 +220,6 @@ for chave, valor in average_salary_by_bucket.items():
 print('')
 print(40*'#')
 print('levantamento de tópicos:')
-
 def contar_palavras(lista):
     contagem={}
     for i in lista:
