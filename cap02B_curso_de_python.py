@@ -29,3 +29,4 @@ for i in lista:
         print(i/0)
     except:
         print('Error by division!!')
+
