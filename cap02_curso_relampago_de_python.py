@@ -57,3 +57,67 @@ taxa = lambda x:x*0.2
 print(f'Exemplo de função lambda como função composta:')
 print(f'Lista de preços: {precos}')
 print(f'Lista de taxas sobre preços: {list(map(taxa,precos))} \n')
+
+########################################################################
+print(f'Função extra - map -->> '.ljust(80 ,'#'))
+# função não apresentada no livro
+# a função map() fornece uma maneira de aplicar uma função a todos os itens de um iterável
+
+print('Função map + lambda')
+numbers = [10, 15, 21, 33, 42, 55]
+result = list(map(lambda x: x-5, numbers))
+
+print(f'numbers: {numbers}')
+print(f'result: {result}')
+print('')
+
+'----------------------------------------------------'
+
+print('Função map + definida')
+def func_map(x):
+    return x-5
+
+ans = map(func_map,numbers)
+
+ans = list(ans)
+
+print(f'numbers: {numbers}')
+print(f'result: {ans}')
+print('')
+
+'----------------------------------------------------'
+print('Função map + várias listas')
+
+base_numbers = [2, 4, 6, 8, 10, 12, 14, 16]
+powers = [1, 2, 3, 4, 5]
+
+numbers_powers = list(map(pow, base_numbers, powers))
+
+print(numbers_powers)
+print('')
+
+########################################################################
+print(f'Função extra - filter -->> '.ljust(80 ,'#'))
+# função não representable no livro
+
+lista =[0,1,2,3,4,5,6,7,8,9,10]
+
+ans=list(filter(lambda x: x>=5,lista))
+print(f'Resultado de filtro: {ans}')
+
+print('')
+########################################################################
+print(f'Função extra - reduce -->> '.ljust(80 ,'#'))
+# função não representable no livro
+
+from functools import reduce
+
+def soma_acumuladora(x, y):
+    return x + y
+
+numeros = [1, 2, 3, 4, 5]
+
+resultado = reduce(soma_acumuladora, numeros)
+print(resultado)
+
+print('')
