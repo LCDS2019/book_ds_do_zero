@@ -34,7 +34,6 @@ for i,j in friendships:
 
 for i in users:
     print(i)
-
 ############################################################################
 
 def number_of_friends(user):
