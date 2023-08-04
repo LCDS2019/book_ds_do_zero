@@ -6,3 +6,4 @@ for i in tqdm(range(50), ncols = 100, desc ="Processing: ", colour='RED'):
 print("Iteration Successful")
 
 #[hex (#00ff00), BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE]
+
