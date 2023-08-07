@@ -84,4 +84,37 @@ y=0
 print(f'x:{x} y:{y} z:{z}')
 
 print('')
+'-----------------------------------------------------------------------'
+print('Listas e tuplas')
 
+my_list = [1,2]
+my_tuple = (1,2)
+other_tuple = 3,4
+my_list[1] = 3
+
+print(f'my_tuple: {my_tuple}')
+try:
+    my_tuple[1]=3
+except TypeError:
+    print('cannot modify a tuple')
+
+print('')
+'-----------------------------------------------------------------------'
+
+def sum_and_product(x,y):
+    return (x+y),(x*y)
+
+sp=sum_and_product(2,3)
+s,p=sum_and_product(5,10)
+
+print(f'sp:{sp}')
+print(f's:{s}')
+print(f'p:{p}')
+
+print('')
+print('Inversão de valores:')
+x,y=1,2
+print(x,y)
+
+x,y=y,x
+print(x,y)
